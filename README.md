@@ -7,6 +7,7 @@ docker run busybox echo hello bhai (it will find from local local if not availab
 docker ps --all (get the history details of all)
 ```
 |CONTAINER ID|   IMAGE     |COMMAND              |   CREATED     |STATUS                      |PORTS     |NAMES			|
+--------------------------------------------------------------------------------------------------------------------------------
 |3c2ed4ae7638   |busybox   |"ping www.google.com" |  6 minutes ago    |Exited (0) 5 minutes ago|              |friendly_khayyam|
 |157be6287bdd   |busybox   |"echo hello bhai"|       11 minutes ago   |Exited (0) |11 minutes ago|             |nervous_ride|
 ```command
