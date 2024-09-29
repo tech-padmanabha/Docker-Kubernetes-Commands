@@ -2,12 +2,14 @@
 
 
 ### Basic Commands
-> docker run busybox echo hello bhai (it will find from local local if not available then download from docker hub and run)
-> docker ps --all (get the history details of all)
+```
+docker run busybox echo hello bhai (it will find from local local if not available then download from docker hub and run)
+docker ps --all (get the history details of all)
+```
 |CONTAINER ID|   IMAGE     |COMMAND              |   CREATED     |STATUS                      |PORTS     |NAMES			|
 |3c2ed4ae7638   |busybox   |"ping www.google.com" |  6 minutes ago    |Exited (0) 5 minutes ago|              |friendly_khayyam|
 |157be6287bdd   |busybox   |"echo hello bhai"|       11 minutes ago   |Exited (0) |11 minutes ago|             |nervous_ride|
-
+```command
 > docker create busybox
 > docker start 157be6287bdd
 `157be6287bdd`
@@ -20,7 +22,8 @@
 
 > docker kill 1ade4e344b34 (It will kill the container quickly with out worring about dependencies closed or not)
 
-> docker system prune 
+> docker system prune
+```
 ```command
 WARNING! This will remove:
   - all stopped containers
@@ -34,14 +37,18 @@ Deleted Containers:
 157be6287bdd5c530e20e792b808cd0d4b366338f6040846ce871363e4dc0867
 ```
 ### mysql database in docker 
-
+```
 > docker pull mysql:8.4 ( Pull from docker hub)
 > docker run mysql:8.4  (Here we'll get some information what are required things, we need to provide)
-You need to specify one of the following as an environment variable:
-    - MYSQL_ROOT_PASSWORD
-    - MYSQL_ALLOW_EMPTY_PASSWORD
-    - MYSQL_RANDOM_ROOT_PASSWORD
+```
+Then we'll get
++ You need to specify one of the following as an environment variable:
+  - MYSQL_ROOT_PASSWORD
+  - MYSQL_ALLOW_EMPTY_PASSWORD
+  - MYSQL_RANDOM_ROOT_PASSWORD
+```
 > docker run --name test-sql -e MYSQL_ROOT_PASSWORD=password -d mysql:8.4
+```
 + -e ENV_VARIABLE=value: the `-e` tag creates an environment variable that will be accessible within the container
 + -d: short for detached, the `-d` tag makes the container run in the background. If you remove this tag, the command will keep printing logs until the container stops.
 + --name CONTAINER_NAME: gives the container a name. The name should be readable and short. In our case, the name is test-sql.
